@@ -1,4 +1,15 @@
 {
+  "MIMICC": {
+    "folder": "mimicc",
+    "id": "https://mimicc.example.org/",
+    "version": "1.0.0",
+    "templates": {
+      "MIMICC_SampleExperiment": {
+        "name": "MIMICC_SampleExperiment",
+        "display": true
+      }
+    }
+  },
   "NMGN": {
     "folder": "nmgn_microbiome",
     "id": "https://nmgn.mrc.ukri.org/clusters/microbiome/",
