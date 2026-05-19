@@ -21,6 +21,9 @@ body {
 .data-harmonizer-grid td.empty-invalid-cell {
   background-color: #ff91a4 !important;
 }
+.data-harmonizer-grid td.default-value-cell {
+  background-color: #e8f4fd !important;
+}
 .data-harmonizer-grid .htAutocompleteArrow {
   color: gray;
 }
