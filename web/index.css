@@ -24,6 +24,9 @@ body {
 .data-harmonizer-grid td.default-value-cell {
   background-color: #e8f4fd !important;
 }
+.data-harmonizer-grid td.formula-cell {
+  background-color: #e8f5e9 !important;
+}
 .data-harmonizer-grid .htAutocompleteArrow {
   color: gray;
 }

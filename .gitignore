@@ -249,3 +249,10 @@ web/templates/manifest.json
 lib/utils/1m_dep.js
 script/google_api_key.json
 script/~$dataharmonizer_templates.xlsx
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
