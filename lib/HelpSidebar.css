@@ -29,3 +29,10 @@
   color: #808080;
   font-style: italic;
 }
+
+:root[data-theme="dark"] .help-sidebar,
+:root[data-theme="dark"] .help-sidebar__toggler {
+  background-color: #1a2129;
+  border-color: #2c3540;
+  color: #e6edf3;
+}

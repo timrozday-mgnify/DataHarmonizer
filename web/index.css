@@ -77,3 +77,60 @@ td.hide {
 .selectDepth_3 {padding-left:60px !important}
 .selectDepth_4 {padding-left:80px !important}
 .selectDepth_5 {padding-left:100px !important}
+
+/* Dark mode: follows a `data-theme="dark"` attribute set by the host page
+   (either directly on this document when iframed same-origin, or inherited
+   from dataharmonizer-template-builder's document when bundled there). */
+:root[data-theme="dark"] body {
+  background-color: #0f1419;
+  color: #e6edf3;
+}
+:root[data-theme="dark"] .data-harmonizer-grid .handsontable {
+  background-color: #0f1419;
+  color: #e6edf3;
+}
+:root[data-theme="dark"] .data-harmonizer-grid .handsontable td,
+:root[data-theme="dark"] .data-harmonizer-grid .handsontable th {
+  background-color: #1a2129;
+  color: #e6edf3;
+  border-color: #2c3540;
+}
+:root[data-theme="dark"] .data-harmonizer-grid .handsontable tbody th,
+:root[data-theme="dark"] .data-harmonizer-grid .handsontable thead th {
+  background-color: #30363d;
+}
+:root[data-theme="dark"] .data-harmonizer-grid td.invalid-cell {
+  background-color: #5a1f1f !important;
+}
+:root[data-theme="dark"] .data-harmonizer-grid td.empty-invalid-cell {
+  background-color: #7a2030 !important;
+}
+:root[data-theme="dark"] .data-harmonizer-grid td.default-value-cell {
+  background-color: #173a52 !important;
+  color: #e6edf3;
+}
+:root[data-theme="dark"] .data-harmonizer-grid td.formula-cell {
+  background-color: #1d3b22 !important;
+  color: #e6edf3;
+}
+:root[data-theme="dark"] .data-harmonizer-grid th.required {
+  background-color: #6b5a05 !important;
+  color: #e6edf3;
+}
+:root[data-theme="dark"] .data-harmonizer-grid th.recommended {
+  background-color: #4a2a52 !important;
+  color: #e6edf3;
+}
+:root[data-theme="dark"] .data-harmonizer-grid th.overlayEdge,
+:root[data-theme="dark"] .data-harmonizer-grid table.htCore > tbody > tr td:nth-child(2) {
+  border-right-color: #555;
+}
+:root[data-theme="dark"] .handsontable.listbox td {
+  border-color: #2c3540;
+  background-color: #1a2129;
+  color: #e6edf3;
+}
+:root[data-theme="dark"] .handsontable.listbox td:hover,
+:root[data-theme="dark"] .handsontable.listbox td.current.highlight {
+  background-color: #30363d !important;
+}

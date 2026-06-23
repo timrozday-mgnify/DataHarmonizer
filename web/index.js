@@ -76,7 +76,7 @@ const main = async function () {
       $('#getting-started-carousel-container').html(getGettingStartedMarkup());
     });
 
-    new Toolbar(dhToolbarRoot, context, {
+    const toolbar = new Toolbar(dhToolbarRoot, context, {
       templatePath: context.appConfig.template_path, // TODO: a default should be loaded before Toolbar is constructed! then take out all loading in "toolbar" to an outside context
       releasesURL:
         'https://github.com/cidgoh/pathogen-genomics-package/releases',
@@ -89,6 +89,24 @@ const main = async function () {
     });
 
     new Footer(dhFooterRoot, context);
+
+    // Programmatic export hook for embedding pages (e.g. an iframe parent
+    // that wants the current grid data without driving the Save As dialog).
+    // Set only once the grid is actually loaded (context.dhs populated by
+    // context.reload() above), so embedders can poll/check `.ready`.
+    window.dataHarmonizer = {
+      ready: true,
+      getExportJson: (lang) => toolbar.getExportJson(lang),
+      loadExportJson: (jsonObj, locale) => toolbar.loadExportJson(jsonObj, locale),
+      getCellValue: (row, colTitle) => toolbar.getCellValue(row, colTitle),
+      setCellValue: (row, colTitle, value) => toolbar.setCellValue(row, colTitle, value),
+      getRowCount: () => toolbar.getRowCount(),
+      findRowIndex: (keyColTitle, keyValue) => toolbar.findRowIndex(keyColTitle, keyValue),
+      addRow: () => toolbar.addRow(),
+      upsertRow: (keyColTitle, keyValue, valuesByColTitle) =>
+        toolbar.upsertRow(keyColTitle, keyValue, valuesByColTitle),
+    };
+
     return context;
   });
 };
