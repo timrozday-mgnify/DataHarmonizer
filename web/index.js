@@ -105,6 +105,8 @@ const main = async function () {
       addRow: () => toolbar.addRow(),
       upsertRow: (keyColTitle, keyValue, valuesByColTitle) =>
         toolbar.upsertRow(keyColTitle, keyValue, valuesByColTitle),
+      upsertRows: (keyColTitle, entries) =>
+        toolbar.upsertRows(keyColTitle, entries),
     };
 
     return context;
